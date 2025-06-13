@@ -3,71 +3,455 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cultura Rural e Urbana</title>
+  <meta name="description" content="Explore as riquezas e contrastes entre a cultura rural e urbana brasileira">
+  <title>Cultura Rural e Urbana | Do Campo à Cidade</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/brazil-flag.svg" type="image/svg+xml">
 </head>
 <body>
-  <header>
-    <h1>Cultura Rural e Urbana</h1>
-    <p>Explorando dois mundos distintos e suas conexões</p>
+  <!-- Loader -->
+  <div class="loader">
+    <div class="loader-icon">
+      <img src="assets/tractor.svg" alt="Ícone de trator" width="60">
+      <img src="assets/skyscraper.svg" alt="Ícone de arranha-céu" width="60">
+    </div>
+  </div>
+
+  <!-- Header Hero -->
+  <header class="hero">
+    <div class="hero-video">
+      <video autoplay muted loop>
+        <source src="assets/country-city.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    
+    <div class="hero-content" data-aos="fade-up">
+      <h1 class="title-main">Cultura <span>Rural</span> e <span>Urbana</span></h1>
+      <p class="subtitle">Descubra os contrastes e conexões entre dois universos brasileiros</p>
+      <a href="#explore" class="btn-explore">
+        Explorar <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+    
+    <div class="scroll-indicator"></div>
   </header>
 
-  <nav>
-    <a href="#rural">Cultura Rural</a>
-    <a href="#urbana">Cultura Urbana</a>
-    <a href="#diferencas">Diferenças</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="assets/logo.svg" alt="Logo Cultura Rural e Urbana" width="120">
+      </a>
+      
+      <div class="nav-links">
+        <a href="#rural" class="nav-link rural-link">
+          <i class="fas fa-tractor"></i> Rural
+        </a>
+        <a href="#urbana" class="nav-link urbana-link">
+          <i class="fas fa-city"></i> Urbana
+        </a>
+        <a href="#comparacao" class="nav-link compare-link">
+          <i class="fas fa-balance-scale"></i> Comparação
+        </a>
+        <a href="#galeria" class="nav-link gallery-link">
+          <i class="fas fa-images"></i> Galeria
+        </a>
+      </div>
+      
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </nav>
 
-  <section class="intro">
-    <h2>Introdução</h2>
-    <p>A cultura de um povo é formada pelos seus costumes, hábitos e modo de vida. No Brasil, as culturas rural e urbana se destacam como formas distintas de viver, pensar e interagir com o mundo. Este site apresenta essas culturas, suas belezas, desafios e contrastes.</p>
-  </section>
-
-  <section id="rural">
-    <h2>Cultura Rural</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Tradições e Costumes</h3>
-        <p>Festas juninas, danças típicas e o modo de falar são parte essencial da identidade rural.</p>
+  <!-- Intro Section -->
+  <section id="explore" class="intro-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Do <span class="rural-text">Campo</span> à <span class="urbana-text">Cidade</span></h2>
+        <div class="divider"></div>
       </div>
-      <div class="card">
-        <h3>Relação com a Natureza</h3>
-        <p>O contato com a terra molda o estilo de vida: plantio, colheita e respeito às estações.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="urbana">
-    <h2>Cultura Urbana</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Movimento e Modernidade</h3>
-        <p>A cultura urbana se expressa em música, grafite, moda e tecnologia. É viva e plural.</p>
-      </div>
-      <div class="card">
-        <h3>Desafios e Oportunidades</h3>
-        <p>As cidades oferecem serviços e inovação, mas enfrentam desigualdade e estresse urbano.</p>
+      
+      <div class="intro-content">
+        <div class="intro-text" data-aos="fade-right">
+          <p>A cultura brasileira é um mosaico vibrante onde o rural e o urbano se entrelaçam de formas fascinantes. Enquanto o campo preserva tradições centenárias e uma relação íntima com a natureza, as cidades pulsam com diversidade e inovação.</p>
+          <p>Este projeto revela como essas duas realidades coexistem, se complementam e às vezes se chocam, formando o tecido social do nosso país.</p>
+          <button class="btn btn-primary">Saiba Mais</button>
+        </div>
+        
+        <div class="intro-image" data-aos="fade-left">
+          <img src="assets/brazil-map.png" alt="Mapa do Brasil destacando áreas rurais e urbanas" class="featured-image">
+          <div class="image-caption">Distribuição geográfica das culturas rural e urbana no Brasil</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="diferencas">
-    <h2>Diferenças</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Ritmo de Vida</h3>
-        <p>O campo valoriza a tranquilidade, a cidade vive no ritmo acelerado do cotidiano.</p>
+  <!-- Cultura Rural Section -->
+  <section id="rural" class="rural-section">
+    <div class="section-curve"></div>
+    
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2><i class="fas fa-tractor"></i> Cultura <span>Rural</span></h2>
+        <p>Tradição, conexão com a terra e saberes ancestrais</p>
+        <div class="divider"></div>
       </div>
-      <div class="card">
-        <h3>Infraestrutura e Cultura</h3>
-        <p>Rural é coletivo e tradicional; urbano é plural e globalizado.</p>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card" data-aos="flip-left">
+          <div class="card-icon">
+            <i class="fas fa-haykal"></i>
+          </div>
+          <h3>Tradições e Festividades</h3>
+          <p>Festas juninas, folias de reis, congadas e outras manifestações culturais que preservam nossa identidade.</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-music"></i> Música caipira e moda de viola</li>
+            <li><i class="fas fa-utensils"></i> Culinária tradicional</li>
+            <li><i class="fas fa-hands-helping"></i> Mutirões comunitários</li>
+          </ul>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card" data-aos="flip-left" data-aos-delay="100">
+          <div class="card-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Agricultura e Sustentabilidade</h3>
+          <p>O conhecimento empírico combinado com novas tecnologias para alimentar o Brasil.</p>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">70%</div>
+              <div class="stat-label">dos alimentos</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">25%</div>
+              <div class="stat-label">do PIB nacional</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card" data-aos="flip-left" data-aos-delay="200">
+          <div class="card-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3>Saberes Tradicionais</h3>
+          <p>Conhecimentos passados por gerações sobre plantas, clima e animais.</p>
+          <div class="knowledge-items">
+            <span class="knowledge-tag">Medicina natural</span>
+            <span class="knowledge-tag">Previsão do tempo</span>
+            <span class="knowledge-tag">Criação de animais</span>
+          </div>
+          <button class="btn btn-outline">Ver técnicas</button>
+        </div>
+      </div>
+      
+      <div class="testimonial-section" data-aos="fade-up">
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <img src="assets/farmer.jpg" alt="Agricultor brasileiro">
+          </div>
+          <div class="testimonial-content">
+            <blockquote>
+              "Na roça a gente aprende que tudo tem seu tempo. A cidade corre, mas a natureza segue seu ritmo."
+            </blockquote>
+            <div class="testimonial-author">
+              <strong>João da Silva</strong>
+              <span>Agricultor familiar - Minas Gerais</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 - Programa Agrinho | Tema: Cultura Rural e Urbana</p>
+  <!-- Cultura Urbana Section -->
+  <section id="urbana" class="urbana-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2><i class="fas fa-city"></i> Cultura <span>Urbana</span></h2>
+        <p>Diversidade, inovação e os desafios da vida nas cidades</p>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="urban-features">
+        <!-- Feature 1 -->
+        <div class="urban-feature" data-aos="fade-right">
+          <div class="feature-content">
+            <h3>Arte e Expressão</h3>
+            <p>Das galerias de arte ao grafite nas ruas, a cidade é uma tela em constante transformação.</p>
+            <ul class="urban-list">
+              <li><i class="fas fa-paint-brush"></i> Grafite e arte urbana</li>
+              <li><i class="fas fa-theater-masks"></i> Teatro e performances</li>
+              <li><i class="fas fa-route"></i> Intervenções urbanas</li>
+            </ul>
+          </div>
+          <div class="feature-image">
+            <img src="assets/street-art.jpg" alt="Arte urbana">
+          </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="urban-feature" data-aos="fade-left">
+          <div class="feature-image">
+            <img src="assets/tech.jpg" alt="Tecnologia urbana">
+          </div>
+          <div class="feature-content">
+            <h3>Tecnologia e Inovação</h3>
+            <p>As cidades são laboratórios de soluções para os desafios contemporâneos.</p>
+            <div class="innovation-stats">
+              <div class="innovation-item">
+                <div class="innovation-number">87%</div>
+                <div class="innovation-label">dos startups brasileiras</div>
+              </div>
+              <div class="innovation-item">
+                <div class="innovation-number">92%</div>
+                <div class="innovation-label">dos postos de trabalho em TI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="urban-feature" data-aos="fade-right">
+          <div class="feature-content">
+            <h3>Desafios Urbanos</h3>
+            <p>A vida nas grandes cidades traz oportunidades mas também grandes contradições.</p>
+            <div class="challenges-grid">
+              <div class="challenge-item">
+                <i class="fas fa-home"></i>
+                <span>Déficit habitacional</span>
+              </div>
+              <div class="challenge-item">
+                <i class="fas fa-car"></i>
+                <span>Mobilidade urbana</span>
+              </div>
+              <div class="challenge-item">
+                <i class="fas fa-heartbeat"></i>
+                <span>Qualidade de vida</span>
+              </div>
+            </div>
+          </div>
+          <div class="feature-image">
+            <img src="assets/urban-challenge.jpg" alt="Desafios urbanos">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section id="comparacao" class="comparison-section">
+    <div class="section-curve reverse"></div>
+    
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2><i class="fas fa-balance-scale"></i> <span>Comparação</span></h2>
+        <p>Entenda as principais diferenças e pontos de conexão</p>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="comparison-grid">
+        <div class="comparison-item rural-item" data-aos="fade-right">
+          <h3><i class="fas fa-tractor"></i> Rural</h3>
+          <ul class="comparison-list">
+            <li><i class="fas fa-check"></i> Ritmo de vida mais lento</li>
+            <li><i class="fas fa-check"></i> Forte conexão com a natureza</li>
+            <li><i class="fas fa-check"></i> Tradições familiares preservadas</li>
+            <li><i class="fas fa-check"></i> Economia baseada em recursos naturais</li>
+            <li><i class="fas fa-check"></i> Comunidades mais unidas</li>
+          </ul>
+        </div>
+        
+        <div class="comparison-item connections-item" data-aos="fade-up">
+          <h3><i class="fas fa-link"></i> Conexões</h3>
+          <ul class="connections-list">
+            <li>Migração campo-cidade</li>
+            <li>Influências culturais mútuas</li>
+            <li>Interdependência econômica</li>
+            <li>Turismo rural e ecológico</li>
+            <li>Movimento de retorno ao campo</li>
+          </ul>
+          <div class="connection-image">
+            <img src="assets/connection.png" alt="Conexão rural-urbana">
+          </div>
+        </div>
+        
+        <div class="comparison-item urban-item" data-aos="fade-left">
+          <h3><i class="fas fa-city"></i> Urbana</h3>
+          <ul class="comparison-list">
+            <li><i class="fas fa-check"></i> Diversidade cultural</li>
+            <li><i class="fas fa-check"></i> Acesso a serviços e tecnologia</li>
+            <li><i class="fas fa-check"></i> Oportunidades profissionais</li>
+            <li><i class="fas fa-check"></i> Vida cultural intensa</li>
+            <li><i class="fas fa-check"></i> Soluções inovadoras</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="timeline-section" data-aos="fade-up">
+        <h3>Evolução Histórica</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">1500-1900</div>
+            <div class="timeline-content">
+              <h4>Predomínio Rural</h4>
+              <p>Economia baseada na agricultura e pecuária, com mais de 80% da população no campo.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">1930-1980</div>
+            <div class="timeline-content">
+              <h4>Êxodo Rural</h4>
+              <p>Industrialização atrai trabalhadores para as cidades. Urbanização acelerada.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Atualidade</div>
+            <div class="timeline-content">
+              <h4>Interconexão</h4>
+              <p>Novas tecnologias aproximam campo e cidade. Movimentos de valorização do rural.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="galeria" class="gallery-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2><i class="fas fa-images"></i> <span>Galeria</span> Visual</h2>
+        <p>Imagens que contam a história desses dois mundos</p>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item" data-aos="zoom-in">
+          <img src="assets/gallery1.jpg" alt="Paisagem rural">
+          <div class="gallery-overlay">
+            <h3>Vida no Campo</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+          <img src="assets/gallery2.jpg" alt="Cidade movimentada">
+          <div class="gallery-overlay">
+            <h3>Pulsar Urbano</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/gallery3.jpg" alt="Agricultura familiar">
+          <div class="gallery-overlay">
+            <h3>Tradição e Trabalho</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+          <img src="assets/gallery4.jpg" alt="Arquitetura urbana">
+          <div class="gallery-overlay">
+            <h3>Modernidade</h3>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-gallery">
+        <div class="video-item" data-aos="fade-right">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_RURAL" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <h3>Documentário: Vida no Campo</h3>
+        </div>
+        <div class="video-item" data-aos="fade-left">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_URBANO" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <h3>Metrópoles Brasileiras</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="container" data-aos="fade-up">
+      <div class="newsletter-card">
+        <div class="newsletter-content">
+          <h3>Receba Mais Conteúdo</h3>
+          <p>Assine nossa newsletter e receba artigos, vídeos e dados sobre cultura brasileira.</p>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Seu melhor e-mail" required>
+          <button type="submit" class="btn btn-primary">
+            Assinar <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Cultura Rural e Urbana</h4>
+          <p>Um projeto educacional sobre as diversidades culturais brasileiras.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#rural">Cultura Rural</a></li>
+            <li><a href="#urbana">Cultura Urbana</a></li>
+            <li><a href="#comparacao">Comparação</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Recursos</h4>
+          <ul>
+            <li><a href="#">Bibliografia</a></li>
+            <li><a href="#">Dados Estatísticos</a></li>
+            <li><a href="#">Mapas Interativos</a></li>
+            <li><a href="#">Glossário</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> contato@culturaruraleurbana.com.br</li>
+            <li><i class="fas fa-phone"></i> (XX) XXXX-XXXX</li>
+            <li><i class="fas fa-map-marker-alt"></i> São Paulo - SP, Brasil</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Programa Agrinho | Tema: Cultura Rural e Urbana. Todos os direitos reservados.</p>
+        <div class="footer-links">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Uso</a>
+          <a href="#">Créditos</a>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="main.js"></script>
 </body>
-</html>
+          </html>
